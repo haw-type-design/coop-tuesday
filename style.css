@@ -10,11 +10,19 @@
     font-display: swap;
 }
 
+:root {
+    --space-xs: 8px;
+    --space-s: 16px;
+    --space-m: 32px;
+    --space-l: 64px;
+    --space-xl: 128px;
+}
 
 body {
     margin: 0;
     font-family: Georgia, Times;
     margin: 0 auto;
+    max-width: 960px;
 }
 
 main {
@@ -26,6 +34,10 @@ h1 {
     font-family: unelegant;
     font-size: 48px;
     margin: 0;
+}
+
+.section-title {
+    margin-top: var(--space-m);
 }
 
 .logo {
@@ -52,6 +64,33 @@ h1 {
     color: blue;
 }
 
+
+code {
+    font-family: monospace;
+    color: darkorange;
+}
+
+
+.section {
+    margin-top: var(--space-xs);
+    white-space: pre-line;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: grid;
+}
+
+hr {
+    width: 100%;
+}
+
+details > summary {
+    list-style: none;
+}
+
+
 @keyframes logo-animation {
     0% {
         transform: rotate(-12deg);
@@ -62,8 +101,42 @@ h1 {
 }
 
 
+
 @media (prefers-reduced-motion) {
     .logo {
         animation: none;
     }
 }
+
+
+
+@media print {
+    @page {
+        size: A4;
+    }
+    body {
+        margin: 0;
+        width: 210mm;
+        height: 100%;
+    }
+    nav {
+        break-after: page;
+        display: grid;
+        height: 100vh;
+        align-content: center;
+        justify-content: center;
+    }
+    .logo {
+        font-size: 128px;
+        font-family: coop;
+        width: 256px;
+        height: 256px;
+        border-radius: 256px;
+        transform: rotate(-8deg);
+        animation: none !important;
+    }
+    hr {
+        display: none;
+    }
+}
+

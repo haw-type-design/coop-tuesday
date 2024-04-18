@@ -38,6 +38,7 @@ h1 {
 
 .section-title {
     margin-top: var(--space-m);
+    margin-bottom: var(--space-m);
 }
 
 .logo {
@@ -56,6 +57,17 @@ h1 {
     animation: logo-animation 12s linear infinite;
 }
 
+.tuesday {
+    top: 20px;
+    margin-left: 80px;
+    font-size: 24px;
+    z-index: 2;
+    position: absolute;
+    font-family: unelegant;
+    transform: rotate(-12deg);
+    background-color: white;
+}
+
 .red {
     color: red;
 }
@@ -71,9 +83,10 @@ code {
 }
 
 
-.section {
+.section, section {
     margin-top: var(--space-xs);
     white-space: pre-line;
+    margin-bottom: var(--space-m);
 }
 
 ul {
@@ -122,7 +135,7 @@ details > summary {
     nav {
         break-after: page;
         display: grid;
-        height: 100vh;
+        height: 297mm;
         align-content: center;
         justify-content: center;
     }
@@ -135,8 +148,18 @@ details > summary {
         transform: rotate(-8deg);
         animation: none !important;
     }
+    .tuesday {
+        top: 28px;
+        margin-left: 128px;
+        font-size: 36px;
+        position: relative;
+    }
     hr {
         display: none;
+    }
+    details {
+        break-before: page;
+        width: 150mm;
     }
 }
 

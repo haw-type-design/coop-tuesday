@@ -7,8 +7,8 @@
 
 
 body {
-    width: 297mm;
-    height: 420mm;
+    width: 118mm;
+    height: 210mm;
     border: 1px solid green;
     font-family: Standard;
 }
@@ -25,7 +25,10 @@ body {
 
 @media print {
     @page {
-        size: A3;
+        size: 118mm 210mm;
+        width: 118mm;
+        height: 210mm;
+        overflow: hidden;
     }
     body {
         border: none; 

@@ -111,7 +111,7 @@ details > summary {
 }
 
 details summary::-webkit-details-marker {
-  display:none;
+    display:none;
 }
 
 
@@ -171,6 +171,12 @@ details summary::-webkit-details-marker {
     details {
         break-before: page;
         width: 150mm;
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    body {
+        margin: 24px 36px;
     }
 }
 
